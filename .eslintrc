@@ -1,0 +1,23 @@
+{
+    "extends": "eslint:recommended",
+    "rules": {
+        "no-alert": 1,
+        "camelcase": 1,
+        "curly": 1,
+        "eqeqeq": 1,
+        "no-console": 1,
+        "guard-for-in": 1,
+        "no-empty": 1,
+        "no-param-reassign": 1,
+        "no-unused-vars": 1,
+        "quotes": [1, "single"]
+    },
+    "globals": {
+        // any globals we want to allow will go here
+    },
+    "env": {
+        "es6": true,
+        "browser": true,
+        "node": true
+    }
+}
