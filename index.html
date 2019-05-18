@@ -7,23 +7,41 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Instanews</title>
 
+    <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/styles.css">
 </head>
 
 <body>
     <header>
-        <div class="select-section">
-            <img>
+        <div class="select-container">
+            <img class="logo" src="assets/images/nyt-logo.svg">
             <p>
                 Choose a Section:
-                <input>
-                <button type=select></button>
             </p>
+            <select name="selection" id="selection">
+                <option value="option1" selected>Sections</option>
+                <option value="option2">Animals</option>
+                <option value="option3">National</option>
+                <option value="option4">Option 4</option>
+
+            </select>
 
         </div>
     </header>
+    <section class="container">
+        <div class="block-container">
+
+            <div class="block-description">
+            <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illo, repudiandae provident sunt, veritatis
+                fuga et doloremque enim eum nostrum ratione quibusdam, eos est soluta pariatur autem omnis at id veniam.
+            </p>
+            <div></div>
+
+        </div>
+    </section>
     <footer>
-        <icon></icon>Copyright 2016 INSTANEWS
+        © Copyright 2016 INSTANEWS
     </footer>
 
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"

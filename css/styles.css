@@ -1,0 +1,58 @@
+html {
+    background-color:#000;
+}
+
+body {
+    color:#ffffff;
+    font-size:16px;
+    font-family:"open-sans-light", Helvetica, sans-serif;
+    line-height:1.5rem;
+}
+
+.select-container {
+    margin: 0 auto;
+    text-align: center;
+    line-height:1.5rem;
+}
+
+.logo {
+    padding:100px;
+}
+
+.container {
+    width:1240px;
+}
+
+.block-container {
+    width:600px;
+    margin:0;
+}
+
+.block-description {
+    background-color:#c2c2c2;
+    /* background:linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), no-repeat; */
+    width:400px;
+    height:100px;
+    margin-bottom:100px;
+}
+
+footer {
+    text-align:center;
+}
+/*---------------------------- Media Queries --------------------------------*/
+
+
+/*--------------------------- Tablet --------------------------------*/
+
+
+@media screen and (min-width:600px) {
+
+}
+
+
+/*---------------------------- Desktop ------------------------------*/
+
+
+@media screen and (min-width:1240px) {
+
+}
