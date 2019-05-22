@@ -25,6 +25,11 @@ body {
     padding:100px;
 }
 
+#selection {
+    font-size:16px;
+    width:120px;
+}
+
 .container {
     width:1240px;
 }
@@ -37,13 +42,16 @@ body {
 .block-description {
     background-color:#c2c2c2;
     /* background:linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), no-repeat; */
+    padding-top: 300px;
     width:400px;
     height:100px;
+    margin-top:60px;
     margin-bottom:100px;
 }
 
 footer {
     text-align:center;
+    padding:60px;
 }
 /*---------------------------- Media Queries --------------------------------*/
 
@@ -52,7 +60,25 @@ footer {
 
 
 @media screen and (min-width:600px) {
+    .select-container {
+        display:flex;
+        flex-direction: row;
+        text-align:center;
+        width:600px;
+        align-items:center;
+        padding:5rem;
 
+    }
+
+    .logo {
+        align-self: left;
+        padding:0px;
+    }
+
+    .select-text {
+        padding:3rem;
+    }
+    
 }
 
 
@@ -60,5 +86,29 @@ footer {
 
 
 @media screen and (min-width:1240px) {
+    .select-container {
+        display:flex;
+        flex-direction: row;
+        text-align:center;
+        width:1240px;
+        align-items:center;
+        padding-top:5rem;
+        padding-left:0px;
+
+    }
+
+    .logo {
+        align-self: left;
+        padding:0px;
+    }
+
+    .select-text {
+        padding:5rem;
+    }
+
+    .footer {
+        text-align:left;
+        padding:1rem;
+    }
 
 }
