@@ -66,12 +66,12 @@ footer {
         text-align:center;
         width:600px;
         align-items:center;
-        padding:5rem;
+        padding:5.5rem;
+        align-content: center;
 
     }
 
     .logo {
-        align-self: left;
         padding:0px;
     }
 
@@ -85,7 +85,7 @@ footer {
 /*---------------------------- Desktop ------------------------------*/
 
 
-@media screen and (min-width:1240px) {
+@media screen and (min-width:1000px) {
     .select-container {
         display:flex;
         flex-direction: row;
@@ -98,7 +98,6 @@ footer {
     }
 
     .logo {
-        align-self: left;
         padding:0px;
     }
 
@@ -106,9 +105,9 @@ footer {
         padding:5rem;
     }
 
-    .footer {
+    footer {
         text-align:left;
-        padding:1rem;
+        padding:3rem;
     }
 
 }
