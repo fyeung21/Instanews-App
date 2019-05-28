@@ -36,11 +36,12 @@ body {
 
 .block-container {
     width:600px;
+    height:100px;
     margin:0;
 }
 
 .block-description {
-    background-color:#c2c2c2;
+    
     /* background:linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), no-repeat; */
     padding-top: 300px;
     width:400px;

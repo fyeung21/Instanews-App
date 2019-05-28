@@ -10,10 +10,13 @@
         "no-empty": 1,
         "no-param-reassign": 1,
         "no-unused-vars": 1,
-        "quotes": [1, "single"]
+        "quotes": [1, "double"]
     },
     "globals": {
-        // any globals we want to allow will go here
+        "jQuery":false,
+        "$": false,
+        "_": false
+        
     },
     "env": {
         "es6": true,

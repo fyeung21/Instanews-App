@@ -5,6 +5,8 @@ const eslint = require('gulp-eslint');
 // Now that we've installed the terser package we can require it:
 const terser = require("gulp-terser"),
   rename = require("gulp-rename");
+
+  
 gulp.task("scripts", function() {
   return gulp
     .src("./js/*.js") // What files do we want gulp to consume?
@@ -33,7 +35,7 @@ gulp.task('reload', function(){
 });
 
 gulp.task("watch", function() {
-gulp.watch(["js/*.js", 'index.html'], gulp.series("scripts", "reload"));
+  gulp.watch(["js/*.js", 'index.html'], gulp.series("scripts", "reload"));
 });
 
 gulp.task('default', gulp.parallel('watch', "browser-sync"));
@@ -44,9 +46,9 @@ gulp.task('default', gulp.parallel('watch', "browser-sync"));
 
 
 // process JS files and return the stream.
-gulp.task('js', function () {
-  return gulp.src('js/*js')
-      .pipe(browserify())
-      .pipe(uglify())
-      .pipe(gulp.dest('dist/js'));
-});
+// gulp.task('js', function () {
+//   return gulp.src('js/*js')
+//       .pipe(browserify())
+//       .pipe(uglify())
+//       .pipe(gulp.dest('dist/js'));
+// });
