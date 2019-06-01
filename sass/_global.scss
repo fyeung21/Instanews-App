@@ -40,14 +40,16 @@ body {
     margin:0;
 }
 
-.block-description {
+.stories-grid {
+    display:grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows:repeat(4, 1fr);
     
     /* background:linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), no-repeat; */
-    padding-top: 300px;
-    width:400px;
-    height:100px;
+    /* padding-top: 300px; */
+    /* height:100px;
     margin-top:60px;
-    margin-bottom:100px;
+    margin-bottom:100px; */
 }
 
 footer {

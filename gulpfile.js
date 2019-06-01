@@ -1,6 +1,11 @@
 const gulp = require("gulp"); // Load Gulp!
 const browserSync = require('browser-sync').create();
 const eslint = require('gulp-eslint');
+const sourcemaps = require('gulp-sourcemaps');
+const prettyError = require('gulp-prettyerror');
+const uglifycss = require('gulp-uglifycss');
+const sass = require('gulp-sass');
+const autoprefixer = require('gulp-autoprefixer');
 
 // Now that we've installed the terser package we can require it:
 const terser = require("gulp-terser"),
@@ -30,17 +35,35 @@ gulp.task('browser-sync', function() {
   });
 });
 
-gulp.task('reload', function(){
+gulp.task('reload', function(done){
    browserSync.reload();
+   done();
 });
 
 gulp.task("watch", function() {
-  gulp.watch(["js/*.js", 'index.html'], gulp.series("scripts", "reload"));
+  gulp.watch('index.html', gulp.series("reload"));
+  gulp.watch(["js/*.js"], gulp.series("scripts", "reload"));
+  gulp.watch(["sass/*.scss"], gulp.series("sass", "reload"));
 });
 
-gulp.task('default', gulp.parallel('watch', "browser-sync"));
+gulp.task('default', gulp.parallel("browser-sync", 'watch'));
 
-
+gulp.task('sass', function(done) {
+  return gulp
+    .src('./sass/style.scss', { sourcemaps: true })
+    .pipe(sourcemaps.init())
+    .pipe(prettyError())
+    .pipe(sass())
+    .pipe(
+      autoprefixer({
+        browsers: ['last 2 versions']
+      })
+    )
+    .pipe(uglifycss())
+    .pipe(rename('style.min.css'))
+    .pipe(sourcemaps.write('../maps'))
+    .pipe(gulp.dest('./build/css'));
+});
 
 
 

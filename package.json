@@ -19,8 +19,14 @@
   "devDependencies": {
     "browser-sync": "^2.26.5",
     "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^6.1.0",
     "gulp-eslint": "^5.0.0",
+    "gulp-prettyerror": "^1.2.1",
     "gulp-rename": "^1.4.0",
-    "gulp-terser": "^1.1.7"
+    "gulp-sass": "^4.0.2",
+    "gulp-sourcemaps": "^2.6.5",
+    "gulp-terser": "^1.1.7",
+    "gulp-uglifycss": "^1.1.0",
+    "node-sass": "^4.12.0"
   }
 }
