@@ -1,7 +1,6 @@
 
 const $select = $("#selection");
 const $storiesGrid = $(".stories-grid");
-const $item = $(".item");
 
 
 $select.on('change', function () {
@@ -15,11 +14,9 @@ $select.on('change', function () {
 
     }).done(function(data) { 
         $storiesGrid.html('');
-        $item.html('');
         $.each(data.results, function (key, data) {
             console.log(data.url);
-            $storiesGrid.append(`<a href="${data.url}"><img src=" ${data.multimedia[4].url}"></a>`);
-            $item.append(`<p>${data.abstract}</p>`)
+            $storiesGrid.append(`<a href="${data.url}"><img class="item" src=" ${data.multimedia[4].url}"><p class="abstract">${data.abstract}</p></a>`);
         })
     })
     .fail(function () {
