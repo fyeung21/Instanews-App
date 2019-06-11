@@ -1,4 +1,4 @@
-const gulp = require("gulp"); // Load Gulp!
+const gulp = require("gulp"); 
 const browserSync = require('browser-sync').create();
 const eslint = require('gulp-eslint');
 const sourcemaps = require('gulp-sourcemaps');
@@ -7,14 +7,13 @@ const uglifycss = require('gulp-uglifycss');
 const sass = require('gulp-sass');
 const autoprefixer = require('gulp-autoprefixer');
 
-// Now that we've installed the terser package we can require it:
 const terser = require("gulp-terser"),
   rename = require("gulp-rename");
 
   
 gulp.task("scripts", function() {
   return gulp
-    .src("./js/*.js") // What files do we want gulp to consume?
+    .src("./js/*.js")
     .pipe(eslint())
     .pipe(eslint.format())
     .pipe(eslint.failAfterError())
@@ -22,9 +21,9 @@ gulp.task("scripts", function() {
       keep_fnames: false,
       toplevel: true
     }
-    )) // Call the terser function on these files
-    .pipe(rename({ extname: ".min.js" })) // Rename the uglified file
-    .pipe(gulp.dest("./build/js")); // Where do we put the result?
+    ))
+    .pipe(rename({ extname: ".min.js" }))
+    .pipe(gulp.dest("./build/js"));
 });
 
 gulp.task('browser-sync', function() {
