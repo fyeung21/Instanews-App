@@ -6,68 +6,14 @@ body {
   font-weight: 300;
   font-style: normal;
   line-height: 1.5rem;
-
-  .select-container {
-    margin: 0 auto;
-    text-align: center;
-    line-height: 1.5rem;
-
-    .logo {
-      padding: 100px;
-    }
-
-    .select-text {
-      padding-bottom: 6rem;
-
-      #selection {
-        font-size: 16px;
-        width: 120px;
-      }
-    }
-  }
-  .container {
-    width: 100%;
-  }
-  footer {
-    text-align: center;
-    padding: 60px;
-  }
 }
 
-.block-container {
-  width: 600px;
-  height: 100px;
-  margin: 0;
-}
+.select-container {
+  margin: 0 auto;
+  text-align: center;
+  line-height: 1.5rem;
 
-.item {
-  width: 100%;
-  height: 100%;
-}
-
-.stories-grid {
-  display: grid;
-  grid-template-columns: repeat(1, 1fr);
-}
-
-.abstract {
-  position: relative;
-  padding: 0 1rem 0 1rem;
-  margin-top: -90px;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.3));
-}
-
-a {
-  text-decoration: none;
-  color: white;
-}
-
-/*---------------------------- Media Queries --------------------------------*/
-
-/*--------------------------- Tablet --------------------------------*/
-
-@media screen and (min-width: 600px) {
-  .select-container {
+  @include tablet {
     display: flex;
     flex-direction: row;
     text-align: center;
@@ -75,29 +21,9 @@ a {
     align-items: center;
     padding: 5.5rem;
     align-content: center;
-
-    .logo {
-      padding: 0px;
-    }
-
-    .select-text {
-      padding: 3rem;
-
-      p {
-        width: 10rem;
-      }
-    }
   }
 
-  .stories-grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-
-/*---------------------------- Desktop ------------------------------*/
-
-@media screen and (min-width: 1000px) {
-  .select-container {
+  @include desktop {
     display: flex;
     flex-direction: row;
     text-align: center;
@@ -105,22 +31,90 @@ a {
     align-items: center;
     padding-top: 5rem;
     padding-left: 0px;
+  }
 
-    .logo {
+  .logo {
+    padding: 100px;
+
+    @include tablet {
       padding: 0px;
     }
 
-    .select-text {
-      padding: 5rem;
-    }
-
-    footer {
-      text-align: none;
-      padding: 3rem;
+    @include desktop {
+      padding: 0px;
     }
   }
 
-  .stories-grid {
+  .select-text {
+    padding-bottom: 6rem;
+
+    @include tablet {
+      padding: 3rem;
+    }
+
+    @include desktop {
+      padding: 5rem;
+    }
+    
+    p {
+      width: 1rem;
+
+      @include tablet {
+        width: 10rem;
+      }
+    }
+    #selection {
+      font-size: 16px;
+      width: 120px;
+    }
+  }
+}
+
+.container {
+  width: 100%;
+}
+
+.stories-grid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+
+  @include tablet {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  @include desktop {
     grid-template-columns: repeat(4, 1fr);
+  }
+
+  .block-container {
+    width: 600px;
+    height: 100px;
+    margin: 0;
+  }
+
+  .item {
+    width: 100%;
+    height: 100%;
+  }
+  .abstract {
+    position: relative;
+    padding: 0 1rem 0 1rem;
+    margin-top: -90px;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3));
+  }
+
+  a {
+    text-decoration: none;
+    color: white;
+  }
+}
+
+footer {
+  text-align: center;
+  padding: 60px;
+
+  @include desktop {
+    text-align: left;
+    padding: 3rem;
   }
 }
