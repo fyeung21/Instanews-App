@@ -1,6 +1,8 @@
 
-const $select = $("#selection");
-const $storiesGrid = $(".stories-grid");
+const $select = $("#selection"),
+    $loading = $(".loading"),
+    $storiesGrid = $(".stories-grid"),
+    $blockContainer = $(".block-container");
 
 
 $select.on('change', function () {
@@ -10,16 +12,30 @@ $select.on('change', function () {
     $.ajax ({
         method: "GET",
         dataType: "json",
-        url: `https://api.nytimes.com/svc/topstories/v2/${section}.json?api-key=YUqBlpD8cvotqM6phA6OPbW1Hlm3O07c`
-
-    }).done(function(data) { 
+        url: `https://api.nytimes.com/svc/topstories/v2/${section}.json?api-key=YUqBlpD8cvotqM6phA6OPbW1Hlm3O07c`,
+        
+        beforeSend: function(){
+            $loading.show();
+            $loading.append(`<img class="loading-gif" src="../assets/images/ajax-loader.gif">`);
+        },
+        complete: function(){
+            $loading.hide();
+        }
+        
+    })
+      
+      
+    .done(function(data) { 
         $storiesGrid.html('');
         $.each(data.results, function (key, data) {
-            console.log(data.url);
-            $storiesGrid.append(`<a href="${data.url}"><img class="item" src=" ${data.multimedia[4].url}"><p class="abstract">${data.abstract}</p></a>`);
+            
+            if (key <= 11 && data.multimedia[4].url.length!==0) {
+                $storiesGrid.append(`<a href="${data.url}"><div class="item" style="background-image: url('${data.multimedia[4].url}')"><p class="abstract">${data.abstract}</p></div></a>`);
+            console.log(data.multimedia[4].url);
+            }
         })
     })
     .fail(function () {
-        $(".block-container").append("Sorry there was an error.");
+        $blockContainer.append("Sorry there was an error.");
     });
 });
