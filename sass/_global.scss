@@ -8,6 +8,11 @@ body {
   line-height: 1.5rem;
 }
 
+.loading {
+    text-align:center;
+    background: no-repeat;
+}
+
 .select-container {
   margin: 0 auto;
   text-align: center;
@@ -96,7 +101,9 @@ body {
   .item {
     width: 100%;
     height: 100%;
-    object-fit:cover;
+    background:cover;
+    padding-top:400px;
+    
   }
   .abstract {
     position: relative;
@@ -107,6 +114,8 @@ body {
   a {
     text-decoration: none;
     color: white;
+    // display:flex;
+    // justify-content:end;
   }
 }
 
