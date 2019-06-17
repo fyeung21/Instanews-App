@@ -9,15 +9,23 @@ body {
 }
 
 .loading {
-    text-align:center;
-    background:no-repeat;
-    width:50px;
+    display:flex;
+    justify-content:center;
+}
+
+.loading-gif {
+  width:5%;
+  height:5%;
 }
 
 .select-container {
   margin: 0 auto;
   text-align: center;
   line-height: 1.5rem;
+  &.header-slim {
+    padding:0;
+    transition:padding 1s;
+  }
 
   @include tablet {
     display: flex;
@@ -41,7 +49,11 @@ body {
 
   .logo {
     padding: 100px;
-
+    height: 200px;
+    &.logo-small {
+        height: 100px;
+        transition: height 1s;
+    }
     @include tablet {
       padding: 0px;
     }
@@ -63,8 +75,7 @@ body {
     }
 
     p {
-      width: 1rem;
-
+      
       @include tablet {
         width: 10rem;
       }
@@ -103,14 +114,19 @@ body {
     height:420px;
     background-size:cover;
     background-position:50%;  
+    display:flex;
+    align-items:flex-end;
   }
 
   .abstract {
-    position: relative;
-    padding: 0 1rem 0 1rem;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.3));
-    display:flex;
-    align-items:flex-end;
+    padding: 0.5rem 1rem 0.5rem 1rem;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5));
+    opacity:0;
+  &:hover {
+    opacity:100;
+    transform: opacity 1s;
+  }
+    
 }
 
   a {

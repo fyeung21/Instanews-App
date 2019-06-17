@@ -2,14 +2,18 @@
 const $select = $("#selection"),
     $loading = $(".loading"),
     $storiesGrid = $(".stories-grid"),
-    $blockContainer = $(".block-container");
+    $blockContainer = $(".block-container"),
+    $logo = $(".logo"),
+    $header = $(".select-container");
 
 $loading.append(`<img class="loading-gif" src="../assets/images/ajax-loader.gif">`);
 $loading.hide();
 
 $select.on('change', function () {
     const section = $("#selection option:selected").val();
-
+    $logo.addClass("logo-small");
+    $header.addClass("header-slim");
+    
     event.preventDefault();
     $.ajax({
         method: "GET",
@@ -22,7 +26,6 @@ $select.on('change', function () {
         complete: function () {
             $loading.hide();
         }
-
     })
 
         .done(function (data) {
