@@ -1,39 +1,47 @@
 # Instanews App
 
-
+A simply formatted webpage that pulls top stories of different genres from the New York Times database.
 
 # Installation
 
 ## Setup
 
-1. Ensure you have [Node.js](https://nodejs.org/en/) installed first.
-
-2. Clone this project
-
-3. Open project folder in command line. 
-
-4. Run 'npm start'.
-
-5. Access the project at http://localhost:3000.
+Clone this project and open index.html in browser.
 
 # Technologies
 
-* JavaScript
-
 * HTML5
 
+* CSS
 
-* Node.js
+* JavaScript
 
+* Gulp
 
 # Personal Learnings
 
+* Explored the use of Ajax for get json requests.
 
+* Learned to install and run gulp tasks.
+
+* Applying CSS grid is a more convenient solution for rearranging layouts in responsive web design. 
+
+* Learned to convert css into sass files for better organized css.
 
 
 # Screenshot
 
-<img src=> 
+##Desktop
+
+<img src="mockups/screenshot-desktop.png">
+
+##tablet
+
+<img src="mockups/screenshot-tablet.png">
+
+##mobile
+
+<img src="mockups/screenshot-mobile.png">
 
 # License
 
