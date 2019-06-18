@@ -31,17 +31,17 @@ Clone this project and open index.html in browser.
 
 # Screenshot
 
-##Desktop
+## Desktop
 
-<img src="mockups/screenshot-desktop.png">
+<img src="mock-ups/screenshot-desktop.png">
 
-##tablet
+## Tablet
 
-<img src="mockups/screenshot-tablet.png">
+<img src="mock-ups/screenshot-tablet.png">
 
-##mobile
+## Mobile
 
-<img src="mockups/screenshot-mobile.png">
+<img src="mock-ups/screenshot-mobile.png">
 
 # License
 
