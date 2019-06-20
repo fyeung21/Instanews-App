@@ -9,13 +9,13 @@ body {
 }
 
 .loading {
-    display:flex;
-    justify-content:center;
+  display: flex;
+  justify-content: center;
 }
 
 .loading-gif {
-  width:5%;
-  height:5%;
+  width: 5%;
+  height: 5%;
 }
 
 .select-container {
@@ -23,8 +23,8 @@ body {
   text-align: center;
   line-height: 1.5rem;
   &.header-slim {
-    padding:0;
-    transition:padding 1s;
+    padding: 0;
+    transition: padding 1s;
   }
 
   @include tablet {
@@ -51,8 +51,8 @@ body {
     padding: 100px;
     height: 200px;
     &.logo-small {
-        height: 100px;
-        transition: height 1s;
+      height: 100px;
+      transition: height 1s;
     }
     @include tablet {
       padding: 0px;
@@ -75,7 +75,6 @@ body {
     }
 
     p {
-      
       @include tablet {
         width: 10rem;
       }
@@ -111,27 +110,26 @@ body {
 
   .item {
     width: 100%;
-    height:420px;
-    background-size:cover;
-    background-position:50%;  
-    display:flex;
-    align-items:flex-end;
+    height: 420px;
+    background-size: cover;
+    background-position: 50%;
+    display: flex;
+    align-items: flex-end;
   }
 
   .abstract {
     padding: 0.5rem 1rem 0.5rem 1rem;
     background-image: linear-gradient(rgba(0, 0, 0, 0.5));
-    opacity:0;
-  &:hover {
-    opacity:100;
-    transform: opacity 1s;
+    opacity: 0;
   }
-    
-}
 
   a {
     text-decoration: none;
-    color:$white;
+    color: $white;
+  }
+  :hover {
+    opacity: 100;
+    transform: opacity 1s;
   }
 }
 
@@ -139,8 +137,15 @@ footer {
   text-align: center;
   padding: 60px;
 
+  @include tablet {
+    text-align: center;
+    padding: 3rem;
+    margin-top: 0px;
+  }
+
   @include desktop {
     text-align: left;
     padding: 3rem;
+    margin-top: 0px;
   }
 }
