@@ -1,0 +1,16 @@
+footer {
+  text-align: center;
+  padding: 60px;
+
+  @include tablet {
+    text-align: center;
+    padding: 3rem;
+    margin-top: 0px;
+  }
+
+  @include desktop {
+    text-align: left;
+    padding: 3rem;
+    margin-top: 0px;
+  }
+}

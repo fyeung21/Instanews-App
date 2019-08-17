@@ -1,0 +1,67 @@
+.select-container {
+  margin: 0 auto;
+  text-align: center;
+  line-height: 1.5rem;
+  &.header-slim {
+    padding: 0;
+    transition: padding 1s;
+  }
+
+  @include tablet {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    width: 600px;
+    align-items: center;
+    padding: 5.5rem;
+    align-content: center;
+  }
+
+  @include desktop {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    width: 1240px;
+    align-items: center;
+    padding-top: 5rem;
+    padding-left: 0px;
+  }
+
+  .logo {
+    padding: 100px;
+    height: 200px;
+    &.logo-small {
+      height: 100px;
+      transition: height 1s;
+    }
+    @include tablet {
+      padding: 0px;
+    }
+
+    @include desktop {
+      padding: 0px;
+    }
+  }
+
+  .select-text {
+    padding-bottom: 6rem;
+
+    @include tablet {
+      padding: 3rem;
+    }
+
+    @include desktop {
+      padding: 5rem;
+    }
+
+    p {
+      @include tablet {
+        width: 10rem;
+      }
+    }
+    #selection {
+      font-size: 16px;
+      width: 120px;
+    }
+  }
+}
