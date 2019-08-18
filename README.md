@@ -1,6 +1,6 @@
 # Instanews App
 
-A simply formatted webpage that pulls top stories of different genres from the New York Times database.
+A simply formatted webpage that pulls top stories of different genres using the New York Times API. For browsers only.
 
 # Installation
 
@@ -12,7 +12,7 @@ Clone this project and open index.html in browser.
 
 * HTML5
 
-* CSS
+* CSS/Sass
 
 * JavaScript
 
@@ -42,7 +42,3 @@ Clone this project and open index.html in browser.
 ## Mobile
 
 <img src="mock-ups/screenshot-mobile.png">
-
-# License
-
-This project is licensed under MIT 2019.
