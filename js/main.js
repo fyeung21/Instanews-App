@@ -1,7 +1,6 @@
 const $select = $("#selection"),
   $loading = $(".loading"),
   $storiesGrid = $(".stories-grid"),
-  $blockContainer = $(".block-container"),
   $logo = $(".logo"),
   $header = $(".select-container");
 
@@ -34,17 +33,16 @@ $select.on("change", function() {
       $.each(data.results, function(key, data) {
         if (key <= 11 && data.multimedia.length >= 5) {
           $storiesGrid.append(
-            `<a target='_blank' rel="noopener noreferrer" href="${
-              data.url
-            }"><div class="item" style="background-image: url('${
-              data.multimedia[4].url
-            }')"><p class="abstract">${data.abstract}</p></div></a>`
+            `<a target='_blank' rel="noopener noreferrer" href="${data.url}">
+            <div class="item" style="background-image: url('${data.multimedia[4].url}')">
+            <div class="abstract">
+            <p>${data.abstract}</p>
+            </div></div></a>`
           );
-          console.log(data.url);
         }
       });
     })
     .fail(function() {
-      $blockContainer.append("Sorry there was an error.");
+      $storiesGrid.append("Sorry there was an error.");
     });
 });
