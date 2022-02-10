@@ -27,6 +27,6 @@
     "gulp-sourcemaps": "^2.6.5",
     "gulp-terser": "^1.1.7",
     "gulp-uglifycss": "^1.1.0",
-    "node-sass": "^4.13.1"
+    "node-sass": "^7.0.0"
   }
 }
